@@ -11,7 +11,7 @@ float posServoPB[10];
 float posServoGarra[10];
 
 
-// instansicação dos Servos
+// instanciação dos Servos
 
 Servo servoBase;
 Servo servoPA;
