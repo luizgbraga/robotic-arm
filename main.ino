@@ -10,7 +10,6 @@ float posServoPA[10];
 float posServoPB[10];
 float posServoGarra[10];
 
-
 // instanciação dos Servos
 
 Servo servoBase;
@@ -72,10 +71,10 @@ void setup() {
     digitalWrite(LED1, LOW);
     digitalWrite(LED2, LOW);
   
-  while(valBut1) {
+  while (valBut1) {
     valBut1 = digitalRead(BUT1);
     
-    if(!valBut1) {
+    if (!valBut1) {
       digitalWrite(LED1, HIGH);
         digitalWrite(LED2, LOW);
       
@@ -104,13 +103,13 @@ void setup() {
     servoGarra.write((posServoGarra[0] + posServoGarra[1] + posServoGarra[2] + posServoGarra[3] + posServoGarra[4] + posServoGarra[5] + posServoGarra[6] + posServoGarra[7] + posServoGarra[8] + posServoGarra[9])/10);
 
     nol++;
-    if(nol > 9) nol = 0;
+    if (nol > 9) nol = 0;
   }
   
-  while(valBut2) {
+  while (valBut2) {
   valBut2 = digitalRead(BUT2);
     
-  if(!valBut2) {
+  if (!valBut2) {
     digitalWrite(LED1, HIGH);
     digitalWrite(LED2, HIGH);
       
@@ -139,49 +138,45 @@ void setup() {
    servoGarra.write((posServoGarra[0] + posServoGarra[1] + posServoGarra[2] + posServoGarra[3] + posServoGarra[4] + posServoGarra[5] + posServoGarra[6] + posServoGarra[7] + posServoGarra[8] + posServoGarra[9])/10);
 
    nol++;
-   if(nol > 9) nol = 0;
+   if (nol > 9) nol = 0;
  }
-  
 }
 
 void loop() {
   digitalWrite(LED1, HIGH);
   digitalWrite(LED2, HIGH);
 
-  if(thetaf_PA > theta0_PA) {
-    for(int i = theta0_PA; i < thetaf_PA; i++) {
+  if (thetaf_PA > theta0_PA) {
+    for (int i = theta0_PA; i < thetaf_PA; i++) {
       servoPA.write(i);
       delay(dt);
     }
   } else {
-    for(int i = theta0_PA; i > thetaf_PA; i--) {
+    for (int i = theta0_PA; i > thetaf_PA; i--) {
       servoPA.write(i);
       delay(dt);
     }
   }
 
-      
-  
-
-   if(thetaf_PB > theta0_PB) {
-    for(int i = theta0_PB; i < thetaf_PB; i++) {
+   if (thetaf_PB > theta0_PB) {
+    for (int i = theta0_PB; i < thetaf_PB; i++) {
       servoPB.write(i);
       delay(dt);
     }
    } else {
-      for(int i = theta0_PB; i > thetaf_PB; i--) {
+      for (int i = theta0_PB; i > thetaf_PB; i--) {
         servoPB.write(i);
         delay(dt);
       }
    }
 
-   if(thetaf_Base > theta0_Base) {
-      for(int i = theta0_Base; i < thetaf_Base; i++) {
+   if (thetaf_Base > theta0_Base) {
+      for (int i = theta0_Base; i < thetaf_Base; i++) {
         servoBase.write(i);
         delay(dt);
       }
    } else {
-      for(int i = theta0_Base; i > thetaf_Base; i--) {
+      for (int i = theta0_Base; i > thetaf_Base; i--) {
         servoBase.write(i);
         delay(dt);
       }
@@ -189,13 +184,13 @@ void loop() {
       
    delay(t);
   
-   if(thetaf_Garra > theta0_Garra) {
-      for(int i = theta0_Garra; i < thetaf_Garra; i++) {
+   if (thetaf_Garra > theta0_Garra) {
+      for (int i = theta0_Garra; i < thetaf_Garra; i++) {
         servoGarra.write(i);
         delay(dt);
       }
    } else {
-      for(int i = theta0_Garra; i > thetaf_Garra; i--) {
+      for (int i = theta0_Garra; i > thetaf_Garra; i--) {
         servoGarra.write(i);
         delay(dt);
       }
@@ -203,40 +198,37 @@ void loop() {
   
    delay(t);
   
-  
-   if(thetaf_Base > theta0_Base) {
-      for(int i = thetaf_Base; i > theta0_Base; i--) {
+   if (thetaf_Base > theta0_Base) {
+      for (int i = thetaf_Base; i > theta0_Base; i--) {
         servoBase.write(i);
         delay(dt);
       }
    } else {
-      for(int i = thetaf_Base; i < theta0_Base; i++) {
+      for (int i = thetaf_Base; i < theta0_Base; i++) {
         servoBase.write(i);
         delay(dt);
       }
    }
 
-   if(thetaf_PB > theta0_PB) {
-      for(int i = thetaf_PB; i > theta0_PB; i--) {
+   if (thetaf_PB > theta0_PB) {
+      for (int i = thetaf_PB; i > theta0_PB; i--) {
         servoPB.write(i);
         delay(dt);
       }
    } else {
-      for(int i = thetaf_PB; i < theta0_PB; i++) {
+      for (int i = thetaf_PB; i < theta0_PB; i++) {
         servoPB.write(i);
         delay(dt);
       }
    }
 
-  
-      
-  if(thetaf_PA > theta0_PA) {
-      for(int i = thetaf_PA; i > theta0_PA; i--) {
+  if (thetaf_PA > theta0_PA) {
+      for (int i = thetaf_PA; i > theta0_PA; i--) {
         servoPA.write(i);
         delay(dt);
       }
   } else {
-    for(int i = thetaf_PA; i < theta0_PA; i++) {
+    for (int i = thetaf_PA; i < theta0_PA; i++) {
       servoPA.write(i);
       delay(dt);
     }
@@ -244,19 +236,17 @@ void loop() {
  
   delay(t);
   
-  if(thetaf_Garra > theta0_Garra) {
-      for(int i = thetaf_Garra; i > theta0_Garra; i--) {
+  if (thetaf_Garra > theta0_Garra) {
+      for (int i = thetaf_Garra; i > theta0_Garra; i--) {
         servoGarra.write(i);
         delay(dt);
       }
    } else {
-      for(int i = thetaf_Garra; i < theta0_Garra; i++) {
+      for (int i = thetaf_Garra; i < theta0_Garra; i++) {
         servoGarra.write(i);
         delay(dt);
     }
   }
   
   delay(dt);
-
-  
 }
