@@ -1,5 +1,5 @@
-# Robotic Arm (IPE1)
+# Robotic Arm
 
-In the course Introduction to Engineering Projects (IPE1), we developed a robotic arm capable of transporting small polystyrene spheres from a support to a small cup. To achieve this, we integrated servo motors into a robotic arm constructed from popsicle sticks, screws, and drills.
+As part of the Introduction to Engineering Projects course, we designed and built a robotic arm capable of transferring small polystyrene spheres from a holding platform to a collection cup. The arm was constructed using simple materials—popsicle sticks, screws, and small drills—demonstrating effective low-cost prototyping.
 
-Three motors were responsible for the arm's three-dimensional movement, while one managed the opening and closing of the claw that carried the small spheres.
+We integrated four servo motors into the design: three controlled the arm’s three-dimensional movement, while a fourth operated the claw mechanism for grasping and releasing the spheres.
